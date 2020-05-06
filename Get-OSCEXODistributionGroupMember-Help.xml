@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<helpItems xmlns="http://msh" schema="maml">
+  <command:command xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+    <command:details>
+      <command:name>Get-OSCEXODistributionGroupMember</command:name>
+      <maml:description>
+        <maml:para>Returns group members in distribution groups.</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para></maml:para>
+      </maml:copyright>
+      <command:verb>Get</command:verb>
+      <command:noun>OSCEXODistributionGroupMember</command:noun>
+      <dev:version></dev:version>
+    </command:details>
+    <maml:description>
+      <maml:para>The Get-OSCEXODistributionGroupMember will attempt to return group members in distribution groups. Additionally you can return members in nested distribution groups.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-OSCEXODistributionGroupMember</maml:name>
+        <command:parameter globbing="false" variableLength="false" position="1" required="true" pipelineInput="true">
+          <maml:name>Identity</maml:name>
+          <maml:description>
+            <maml:para>Specifies the email address of a distribution group.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+        <command:parameter globbing="false" variableLength="false" position="named" required="false" pipelineInput="false">
+          <maml:name>Recurse</maml:name>
+          <maml:description>
+            <maml:para>Gets members from distribution group and nested distribution groups.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">switch</command:parameterValue>
+        </command:parameter>
+        <command:parameter globbing="false" variableLength="false" position="named" required="false" pipelineInput="false">
+          <maml:name>AllProperty</maml:name>
+          <maml:description>
+            <maml:para>Returns all member properties.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">switch</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter globbing="false" variableLength="false" position="1" required="false" pipelineInput="true">
+        <maml:name>Identity</maml:name>
+        <maml:description>
+          <maml:para>Specifies the email address of a distribution group.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri></maml:uri>
+          <maml:description>
+            <maml:para></maml:para>
+          </maml:description>
+        </dev:type>
+        <dev:defaultValue></dev:defaultValue>
+      </command:parameter>
+      <command:parameter globbing="false" variableLength="false" position="named" required="false" pipelineInput="false">
+        <maml:name>Recurse</maml:name>
+        <maml:description>
+          <maml:para>Gets members from distribution group and nested distribution groups.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">switch</command:parameterValue>
+        <dev:type>
+          <maml:name>switch</maml:name>
+          <maml:uri></maml:uri>
+          <maml:description>
+            <maml:para></maml:para>
+          </maml:description>
+        </dev:type>
+        <dev:defaultValue></dev:defaultValue>
+      </command:parameter>
+      <command:parameter globbing="false" variableLength="false" position="named" required="false" pipelineInput="false">
+        <maml:name>AllProperty</maml:name>
+        <maml:description>
+          <maml:para>Returns all member properties.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">switch</command:parameterValue>
+        <dev:type>
+          <maml:name>switch</maml:name>
+          <maml:uri></maml:uri>
+          <maml:description>
+            <maml:para></maml:para>
+          </maml:description>
+        </dev:type>
+        <dev:defaultValue></dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri></maml:uri>
+          <maml:description></maml:description>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Management.Automation.PSObject</maml:name>
+          <maml:uri></maml:uri>
+          <maml:description></maml:description>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors></command:terminatingErrors>
+    <command:nonTerminatingErrors></command:nonTerminatingErrors>
+    <maml:alertSet>
+      <maml:title>None</maml:title>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\&gt;</maml:para>
+        </maml:introduction>
+        <dev:code>Get-OSCEXODistributionGroupMember -Identity "corphr@domain01.onmicrosoft.com" </dev:code>
+        <dev:remarks>
+          <maml:para>Description</maml:para>
+          <maml:para>-----------</maml:para>
+          <maml:para>Gets group members from specified distribution group.</maml:para>
+          <maml:para></maml:para>
+          <maml:para></maml:para>
+          <maml:para></maml:para>
+        </dev:remarks>
+        <command:commandLines>
+          <command:commandLine>
+            <command:commandText></command:commandText>
+          </command:commandLine>
+        </command:commandLines>
+      </command:example>
+      <command:example>
+        <maml:title>-------------------------- EXAMPLE 2 --------------------------</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\&gt;</maml:para>
+        </maml:introduction>
+        <dev:code>"corphr@domain01.onmicrosoft.com" | Get-OSCEXODistributionGroupMember -Recurse -AllProperty | Format-Table -AutoSize</dev:code>
+        <dev:remarks>
+          <maml:para>Description</maml:para>
+          <maml:para>-----------</maml:para>
+          <maml:para>Gets the email addresses of distribution groups from pipeline, then return members from the distribution groups and nested distribution groups.</maml:para>
+          <maml:para></maml:para>
+          <maml:para></maml:para>
+          <maml:para></maml:para>
+        </dev:remarks>
+        <command:commandLines>
+          <command:commandLine>
+            <command:commandText></command:commandText>
+          </command:commandLine>
+        </command:commandLines>
+      </command:example>
+      <command:example>
+        <maml:title>-------------------------- EXAMPLE 3 --------------------------</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\&gt;</maml:para>
+        </maml:introduction>
+        <dev:code>Get-OSCEXODistributionGroupMember -Identity "corphr@domain01.onmicrosoft.com" | Export-Csv -Path .\groupmembers.csv -NoTypeInformation </dev:code>
+        <dev:remarks>
+          <maml:para>Description</maml:para>
+          <maml:para>-----------</maml:para>
+          <maml:para>Gets group members from specified distribution group and export the list to a comma-separated values file.</maml:para>
+          <maml:para></maml:para>
+          <maml:para></maml:para>
+          <maml:para></maml:para>
+        </dev:remarks>
+        <command:commandLines>
+          <command:commandLine>
+            <command:commandText></command:commandText>
+          </command:commandLine>
+        </command:commandLines>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Windows PowerShell Advanced Function</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>ExchangeService.ExpandGroup Method </maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+</helpItems>

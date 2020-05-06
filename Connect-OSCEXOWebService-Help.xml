@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<helpItems xmlns="http://msh" schema="maml">
+  <command:command xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+    <command:details>
+      <command:name>Connect-OSCEXOWebService</command:name>
+      <maml:description>
+        <maml:para>Initiates a connection to Office 365 Exchange Online.</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para></maml:para>
+      </maml:copyright>
+      <command:verb>Connect</command:verb>
+      <command:noun>OSCEXOWebService</command:noun>
+      <dev:version></dev:version>
+    </command:details>
+    <maml:description>
+      <maml:para>The Connect-OSCEXWebService will attempt to initiates connection to Office 365 Exchange Online. You must provide a credential for connecting.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Connect-OSCEXOWebService</maml:name>
+        <command:parameter globbing="false" variableLength="false" position="1" required="true" pipelineInput="false">
+          <maml:name>Credential</maml:name>
+          <maml:description>
+            <maml:para>The credential to use for connecting to Office 365 Exchange Online.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">PSCredential</command:parameterValue>
+        </command:parameter>
+        <command:parameter globbing="false" variableLength="false" position="2" required="false" pipelineInput="false">
+          <maml:name>ExchangeVersion</maml:name>
+          <maml:description>
+            <maml:para>Specifies the version of Exchange. The default version is Exchange 2010 SP2.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">Microsoft.Exchange.WebServices.Data.ExchangeVersion</command:parameterValue>
+        </command:parameter>
+        <command:parameter globbing="false" variableLength="false" position="3" required="false" pipelineInput="false">
+          <maml:name>TimeZoneStandardName</maml:name>
+          <maml:description>
+            <maml:para>The time zone to which the service is scoped.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        </command:parameter>
+        <command:parameter globbing="false" variableLength="false" position="named" required="false" pipelineInput="false">
+          <maml:name>Force</maml:name>
+          <maml:description>
+            <maml:para>Overwrites the existing Exchange Service variable by using a new credential.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">switch</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter globbing="false" variableLength="false" position="1" required="true" pipelineInput="false">
+        <maml:name>Credential</maml:name>
+        <maml:description>
+          <maml:para>The credential to use for connecting to Office 365 Exchange Online.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">PSCredential</command:parameterValue>
+        <dev:type>
+          <maml:name>PSCredential</maml:name>
+          <maml:uri></maml:uri>
+          <maml:description>
+            <maml:para></maml:para>
+          </maml:description>
+        </dev:type>
+        <dev:defaultValue></dev:defaultValue>
+      </command:parameter>
+      <command:parameter globbing="false" variableLength="false" position="2" required="false" pipelineInput="false">
+        <maml:name>ExchangeVersion</maml:name>
+        <maml:description>
+          <maml:para>Specifies the version of Exchange. The default version is Exchange 2010 SP2.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">Microsoft.Exchange.WebServices.Data.ExchangeVersion</command:parameterValue>
+        <dev:type>
+          <maml:name>Microsoft.Exchange.WebServices.Data.ExchangeVersion</maml:name>
+          <maml:uri></maml:uri>
+          <maml:description>
+            <maml:para></maml:para>
+          </maml:description>
+        </dev:type>
+        <dev:defaultValue>Exchange2010_SP2</dev:defaultValue>
+      </command:parameter>
+      <command:parameter globbing="false" variableLength="false" position="3" required="false" pipelineInput="false">
+        <maml:name>TimeZoneStandardName</maml:name>
+        <maml:description>
+          <maml:para>The time zone to which the service is scoped.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+        <dev:type>
+          <maml:name>string</maml:name>
+          <maml:uri></maml:uri>
+          <maml:description>
+            <maml:para></maml:para>
+          </maml:description>
+        </dev:type>
+        <dev:defaultValue></dev:defaultValue>
+      </command:parameter>
+      <command:parameter globbing="false" variableLength="false" position="named" required="false" pipelineInput="false">
+        <maml:name>Force</maml:name>
+        <maml:description>
+          <maml:para>Overwrites the existing Exchange Service variable if you want to use a difference credential.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">switch</command:parameterValue>
+        <dev:type>
+          <maml:name>switch</maml:name>
+          <maml:uri></maml:uri>
+          <maml:description>
+            <maml:para></maml:para>
+          </maml:description>
+        </dev:type>
+        <dev:defaultValue></dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri></maml:uri>
+          <maml:description></maml:description>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>None</maml:name>
+          <maml:uri></maml:uri>
+          <maml:description></maml:description>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors></command:terminatingErrors>
+    <command:nonTerminatingErrors></command:nonTerminatingErrors>
+    <maml:alertSet>
+      <maml:title>None</maml:title>
+      <maml:alert>
+        <maml:para>None</maml:para>
+      </maml:alert>
+      <maml:alert>
+        <maml:para></maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\&gt;</maml:para>
+        </maml:introduction>
+        <dev:code>Connect-OSCEXOWebService -Credential (Get-Credential admin@domain01.onmicrosoft.com)</dev:code>
+        <dev:remarks>
+          <maml:para>Description</maml:para>
+          <maml:para>-----------</maml:para>
+          <maml:para>Initiates a connection to Office 365 Exchange Online.</maml:para>
+          <maml:para></maml:para>
+          <maml:para></maml:para>
+          <maml:para></maml:para>
+        </dev:remarks>
+        <command:commandLines>
+          <command:commandLine>
+            <command:commandText></command:commandText>
+          </command:commandLine>
+        </command:commandLines>
+      </command:example>
+      <command:example>
+        <maml:title>-------------------------- EXAMPLE 2 --------------------------</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\&gt;</maml:para>
+        </maml:introduction>
+        <dev:code>Connect-OSCEXOWebService -Credential (Get-Credential admin@domain02.onmicrosoft.com) -Force</dev:code>
+        <dev:remarks>
+          <maml:para>Description</maml:para>
+          <maml:para>-----------</maml:para>
+          <maml:para>Initiates a connection to Office 365 Exchange Online by using a different credential.</maml:para>
+          <maml:para></maml:para>
+          <maml:para></maml:para>
+          <maml:para></maml:para>
+        </dev:remarks>
+        <command:commandLines>
+          <command:commandLine>
+            <command:commandText></command:commandText>
+          </command:commandLine>
+        </command:commandLines>
+      </command:example>
+      <command:example>
+        <maml:title>-------------------------- EXAMPLE 3 --------------------------</maml:title>
+        <maml:introduction>
+          <maml:para>PS C:\&gt;</maml:para>
+        </maml:introduction>
+        <dev:code>Connect-OSCEXOWebService -Credential (Get-Credential admin@domain01.onmicrosoft.com) -TimeZoneStandardName "Pacific Standard Time"</dev:code>
+        <dev:remarks>
+          <maml:para>Description</maml:para>
+          <maml:para>-----------</maml:para>
+          <maml:para>Initiates a connection to Office 365 Exchange Online. Specifies another time zone to match the settings in Outlook Web App (OWA).</maml:para>
+          <maml:para></maml:para>
+          <maml:para></maml:para>
+          <maml:para></maml:para>
+        </dev:remarks>
+        <command:commandLines>
+          <command:commandLine>
+            <command:commandText></command:commandText>
+          </command:commandLine>
+        </command:commandLines>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Windows PowerShell Advanced Function</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Connecting to EWS by using the EWS Managed API</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+</helpItems>
